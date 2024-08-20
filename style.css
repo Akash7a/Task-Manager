@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(150deg, black, rgb(97, 93, 93));
+    overflow-x: hidden;
+}
+
+h1 {
+    color: rgb(235, 129, 0);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-shadow: 2px 2px 5px black;
+    word-spacing: 13px;
+}
+
+form {
+    width: 70vmin;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 3px;
+    box-shadow: 5px 5px 10px black;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+}
+
+form input,
+button {
+    padding: 10px;
+    font-size: 18px;
+    border: 0;
+    box-shadow: 5px 5px 10px gray, -2px -2px 5px gray;
+    outline: none;
+}
+
+form button {
+    background-color: gray;
+    font-weight: bold;
+}
+
+form button:hover {
+    background-color: rgb(155, 155, 167);
+}
+
+::placeholder {
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+}
+
+.task_container {
+    width: 70vmin;
+    margin: 10px auto;
+    background-color: white;
+    padding: 10px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: lightgray;
+    color: black;
+    font-weight: bold;
+    box-shadow: 5px 5px 5px black;
+}
+
+.title {
+    flex-basis: 80%;
+    color: rgb(114, 6, 6);
+    background-color: lightgoldenrodyellow;
+    padding: 10px;
+    box-shadow: 2px 2px 5px black;
+}
+
+.controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 20px;
+}
+
+.controls i {
+    font-size: 25px;
+}
+
+.controls i:first-child {
+    color: red;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: rgb(114, 6, 6);
+    background-color: lightgoldenrodyellow;
+    padding: 10px;
+    box-shadow: 2px 2px 5px black;
+}
+
+@media screen and (max-width: 1200px) {
+    form, .task_container {
+        width: 70%;
+    }    
+    h1 {
+        font-size: 30px;
+    }
+}
+
+.store_container {
+    background-color: white;
+    width: 50vmin;
+    min-height: 50vh;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px black, inset 5px 5px 10px gray;
+    position: absolute;
+    top: 70px;
+    right: 1%;
+    transition: 0.2s linear;
+}
+
+.show_hide {
+    right: 0%;
+}
+
+.points {
+    background-color: goldenrod;
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    box-shadow: 5px 5px 10px black;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px black;
+}
+.completed_tasks{
+    box-shadow: 2px 2px 5px black;
+    margin: 15px;
+    padding: 10px;
+    position: relative;
+    text-decoration: line-through;
+    color: rgb(114, 6, 6);
+    background-color: lightgoldenrodyellow;
+    padding: 10px;
+    box-shadow: 2px 2px 5px black;
+    font-weight: bold;
+}
+.total_completed_tasks{
+    background-color: lightsalmon;
+    padding: 10px;
+    color: white;
+    box-shadow: 2px 2px 5px black;
+    text-shadow: 2px 2px 5px black;
+    font-weight: bolder;
+    border-radius: 5px;
+}
+.remove{
+    display: none;
+}

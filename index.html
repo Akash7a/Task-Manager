@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        .store_container{
+            background-color: white;
+            min-width:50vmin;
+            min-height: 50vh;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 5px 5px 10px black , inset 5px 5px 10px gray;
+            position: absolute;
+            top: 70px;
+            right: -100%;
+            transition: 0.2s linear;
+        }
+        @media screen and (max-width:1200px) {
+            .store_container{
+                width: 70vmin;
+            }
+        }
+        .show_hide{
+            right: 0%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <form>
+        <h1>Trac Your Progress</h1>
+        <input type="text" placeholder="Enter Your Task">
+        <button type="submit">Create</button>
+    </form>
+    <div class="store_container">
+
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
